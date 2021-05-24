@@ -4,13 +4,18 @@
 """
 # Bài làm:
 """
-def max_min(a,b,c,d,e):
-    max = a
-    min = a
-    for number in numbers:
-        if number > mux:
-            max = number
+def max(*numbers):
+    max = numbers[0]
+    for i in numbers:
+        if i > max:
+            max = i
     return max
+def min(*numbers):
+    min = numbers[0]
+    for i in numbers:
+        if i < min:
+            min = i
+    return min
 """
 # Bài 2:
 """
@@ -95,12 +100,15 @@ Ghi chú: Pangram là chuỗi chứa mỗi chữ cái trong bảng alphabet ít 
 # Bài làm:
 """
 def is_pangram(str, alphabet):
-    dem = 0
-    for n in range(len(alphabet)):
-        for m in range(len(str)):
-            if str[m] == alphabet[n]:
-                dem += 1
-    if dem == len(alphabet)
+    for n in alphabet:
+        if n not in str:
+            print("đây ko phai chuỗi pangram")
+            return "false"
+        else:
+            return "true"
+alphabet = "qwertyuiopasdfghjkzxcvbnm"
+str = input("nhập chuỗi kí tự str là:")
+print(is_pangram(str,alphabet))
 """
 # Bài 7:
 """
@@ -164,59 +172,11 @@ n = input("nhập n=")
 def he_quy_dem(n):
     'hàm để trả về số lượng chữ số lẻ của sô nguyên dương n cho trước'
     dem = 0
-    for m in range(len(n)):
-        if int(n[m]) % 2 == 1:
+    for m in n:
+        if int(m) % 2 == 1:
             dem += 1
     return dem
 print(he_quy_dem(n))
 """
-# Bài 10:
-"""
-Bài 10: Cho dãy số Tribonacci với công thức truy hồi sau:
-            F(n) = F(n-1) + F(n-2) + F(n-3),    F(1) = 1, F(2) = 1, F(3) = 2
-    Xây dựng 2 hàm để tìm ra số thứ n trong dãy số theo:
-        + Hàm Đệ quy
-        + Hàm Không đệ quy
-"""
-# Bài làm:
-"""
-def tribonacci(n):
-    if f(n) <= 2:
-        return 1
-    else:
-        f(n) = f(n-1) + f(n-2) + f(n-3)
-    return f(n)
-n = int(input("nhập n ="))
-print(tribonacci(n))
-"""
-# Bài 11:
-"""
-Bài 11. Thực hiện code lại hàm sau và cho biết ý nghĩa của nó
-def enter_data():
-    while True:
-        n = input("Nhập 1 số nguyên: ")
-        if n.isnumeric():
-            n = int(n)
-            if n > 0:
-                print("Đã nhập số dương")
-                return n
-            print("Đã nhập số không dương. Chương trình sẽ tiếp tục!")
-        else:
-            print("Dữ liệu đã nhập không phải số nguyên")
-"""
-"""
-def enter_data():
-    while True:
-        n = input("Nhập 1 số nguyên: ")
-        if n.isnumeric():
-            n = int(n)
-            if n > 0:
-                print("Đã nhập số dương")
-                return n
-            print("Đã nhập số không dương. Chương trình sẽ tiếp tục!")
-        else:
-            print("Dữ liệu đã nhập không phải số nguyên")
-"""
-
 
 
