@@ -213,5 +213,39 @@ def tribbo(n):
     return f
 print(tribbo(7))
 """
+# Bài 11:
+"""
+Bài 11. Thực hiện code lại hàm sau và cho biết ý nghĩa của nó
+def enter_data():
+    while True:
+        n = input("Nhập 1 số nguyên: ")
+        if n.isnumeric():
+            n = int(n)
+            if n > 0:
+                print("Đã nhập số dương")
+                return n
+            print("Đã nhập số không dương. Chương trình sẽ tiếp tục!")
+        else:
+            print("Dữ liệu đã nhập không phải số nguyên")
+"""
+'''
+def enter_data():
+    """
+     Đây là chương trình để kiểm tra 1 số nguyên n nhập từ bàn phím có phải số nguyên dương hay không
+     :return: Nếu đúng trả kết quả n ra màn hình
+    """
+    while True:
+        n =input(" Nhập 1 số nguyên:")
+        if n.isnumeric():
+            n = int(n)
+            if n > 0:
+                print("Đã nhập số dương")
+                return n
+            print(" Đã nhập sô dương, chương trình sẽ tiếp tục!")
+        else:
+            print("Dữ liệu đã nhập không phải số nguyên")
+print(enter_data())
+'''
+
 
 
