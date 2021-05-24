@@ -178,5 +178,40 @@ def he_quy_dem(n):
     return dem
 print(he_quy_dem(n))
 """
+"""
+Bài 10: Cho dãy số Tribonacci với công thức truy hồi sau:
+            F(n) = F(n-1) + F(n-2) + F(n-3),    F(1) = 1, F(2) = 1, F(3) = 2
+    Xây dựng 2 hàm để tìm ra số thứ n trong dãy số theo:
+        + Hàm Đệ quy
+        + Hàm Không đệ quy
+"""
+# Bài làm:
+"""
+def tribo(n):
+    if n == 0:
+        return 0
+    elif 0 < n <=2:
+        return 1
+    else:
+        return tribo(n-1) + tribo(n-2) + tribo(n-3)
+print(tribo(6))
+"""
+
+"""
+def tribbo(n):
+    f = 0
+    a = 1
+    b = 1
+    c = 2
+    i = 4
+    while i <= n:
+        f = a + b + c
+        a = b
+        b = c
+        c = f
+        i += 1
+    return f
+print(tribbo(7))
+"""
 
 
